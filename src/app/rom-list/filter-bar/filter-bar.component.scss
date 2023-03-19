@@ -1,0 +1,41 @@
+$breakpoint-show-version-filter: 640px;
+
+:host {
+    display: block;
+}
+
+mat-toolbar {
+    font-size: .8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: auto !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+mat-form-field {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-bottom: -1rem;
+    width: 120px;
+
+    @media (min-width: $breakpoint-show-version-filter) {
+        max-width: 35rem;
+    }
+}
+
+mat-button-toggle-group {
+    width: 100%;
+    overflow-x: auto;
+
+    mat-button-toggle {
+        flex: 1 0 auto;
+    }
+
+    @media (min-width: $breakpoint-show-version-filter) {
+        width: auto;
+    }
+}

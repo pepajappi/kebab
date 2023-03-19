@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+
+    @media (min-width: 640px) {
+        max-width: 1024px;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+[mat-raised-button] {
+    text-transform: uppercase;
+}
+
+mat-panel-title {
+    align-items: center;
+}
+
+mat-icon {
+    margin-right: 2rem;
+}
+
+mat-panel-title,
+mat-panel-description {
+  flex-basis: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+mat-panel-description {
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+}

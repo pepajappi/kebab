@@ -1,0 +1,25 @@
+{
+    "Title": "{{deviceName}}: Liste von Custom ROMs",
+    "Share": "Teilen",
+    "Open preferences": "Einstellungen öffnen",
+    "Preferences": {
+        "Title": "Einstellungen",
+        "Theme": "Design",
+        "Language": "Sprache",
+        "Choose": "Auswählen",
+        "Languages": {
+            "en": "Englisch",
+            "de": "Deutsch",
+            "fr": "Französisch",
+            "pl": "Polnisch",
+            "pt-BR": "Portugisisch (Brasilianisch)"
+        }
+    },
+    "Theme": {
+        "Light": "Hell",
+        "Dark": "Dunkel",
+        "System default": "Systemvorgabe"
+    },
+    "Configure language": "Sprache konfigurieren",
+    "About": "Über"
+}

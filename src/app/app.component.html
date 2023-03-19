@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <h1><a routerLink="/" data-test="home-link">{{ 'Title' | translate:environment }}</a></h1>
+  <span class="icon-spacer"></span>
+  <button mat-icon-button (click)="share()" *ngIf="supportsSharing" [matTooltip]="'share' | translate">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button mat-icon-button (click)="openPreferences()" data-test="preferences" [attr.aria-label]="'Preferences.Title' | translate" [matTooltip]="'Preferences.Title' | translate">
+    <mat-icon>settings</mat-icon>
+  </button>
+  <a mat-icon-button routerLink="/about" [matTooltip]="'About' | translate" data-test="about-link">
+    <mat-icon>help_outline</mat-icon>
+  </a>
+</mat-toolbar>
+<router-outlet></router-outlet>

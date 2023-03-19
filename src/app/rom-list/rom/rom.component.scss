@@ -1,0 +1,22 @@
+mat-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 150%;
+}
+
+mat-card-content {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+p {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &.single-value {
+        flex-wrap: nowrap;
+    }
+}

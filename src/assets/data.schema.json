@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alioth.knecht.rocks/assets/data.schema.json",
+  "title": "Data",
+  "description": "Defines the global data structure.",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "$ref": "#/$defs/category"
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "required": [
+        "title",
+        "roms"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name of the category."
+        },
+        "roms": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/item"
+          },
+          "description": "Contains the actual items"
+        }
+      },
+      "additionalProperties": false
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "name",
+        "links",
+        "androidVersions"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the ROM."
+        },
+        "pinned": {
+          "type": "boolean",
+          "description": "whether this ROM should be pinned at top of the list."
+        },
+        "note": {
+          "type": "string",
+          "description": "Notes regarding the ROM."
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "Last time this entry has been modified."
+        },
+        "androidVersions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          },
+          "description": "The Android versions available for this rom."
+        },
+        "links": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/link"
+          },
+          "description": "Contains one or more links"
+        },
+        "maintainer": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/maintainer"
+          },
+          "description": "Contains one or maintainers"
+        }
+      },
+      "additionalProperties": false
+    },
+    "link": {
+      "type": "object",
+      "required": [
+        "url",
+        "text"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The URL where this link points to."
+        },
+        "text": {
+          "type": "string",
+          "description": "The title of this link."
+        }
+      },
+      "additionalProperties": false
+    },
+    "maintainer": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "link": {
+          "type": "string",
+          "description": "The URL where this link points to."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the Maintainer."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

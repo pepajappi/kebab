@@ -1,0 +1,10 @@
+<app-filter-bar></app-filter-bar>
+<main>
+  <app-rom-category *ngFor="let category of (filteredData$ | async); trackBy: identifyCategory" [title]="category.title"
+    [roms]="category.roms">
+  </app-rom-category>
+</main>
+<footer>
+  <p [innerHTML]="'Footer.Last modified' | translate:{lastModified: environment.lastModified | date:'medium'}"></p>
+  <p [innerHTML]="'Footer.See about' | translate:{aboutUrl: 'about'}"></p>
+</footer>
